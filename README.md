@@ -1,8 +1,8 @@
-# VisionLens — 24BAI10032
+# VisionLens
 
 ## Computer Vision Based Campus Lost-and-Found Visual Matching System
 
-VITyarthi | Computer Vision Project
+> **VITyarthi** | Computer Vision Project
 
 ---
 
@@ -172,11 +172,27 @@ VisionLens/
                  └──────────────────┘
 ```
 ## Challenges
- 1.Handling a multi-label dataset stored through CSV files.
- 2.Understanding how pretrained CNN models can be used for feature extraction.
- 3.Selecting an appropriate similarity metric.
- 4.Managing feature extraction for a relatively large image gallery.
- 5.Designing a modular architecture within a limited project timeline.
- 6.Handling dataset files without unnecessarily modifying the original dataset structure.
+
+1. Handling a multi-label dataset stored through CSV files.
+
+2. Understanding how pretrained CNN models can be used for feature extraction.
+
+3. Selecting an appropriate similarity metric.
+
+4. Managing feature extraction for a relatively large image gallery.
+
+5. Designing a modular architecture within a limited project timeline.
+
+6. Handling dataset files without unnecessarily modifying the original dataset structure.
+
+---
+
+## License
+
+This project was submitted as part of the **Open Source Software Course at VIT Bhopal University**.
+All scripts and documentation are original work by **SHASHANK KUMAR**.
+
+---
+
 
 
