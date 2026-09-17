@@ -44,3 +44,19 @@ Cosine Similarity
 Similarity Ranking
     ↓
 Top-5 Matching Results
+```
+##Objectives
+
+###The main objectives of VisionLens are:
+
+Allow users to upload an image of a lost item.
+Validate and preprocess the uploaded image.
+Extract meaningful visual features using a pretrained CNN.
+Compare the query image with a gallery of found-item images.
+Rank images using cosine similarity.
+Display the Top-5 visually similar matches.
+Provide a simple and understandable user interface.
+Maintain a modular and maintainable project structure.
+Evaluate the effectiveness of the visual retrieval approach
+
+##
