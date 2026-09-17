@@ -79,7 +79,7 @@ VisionLens uses cosine similarity to measure how close two visual representation
 
 Because the feature vectors are normalized, their dot product is equivalent to cosine similarity.
 
-## odule 4 — Search Engine
+## Module 4 — Search Engine
 File: cv/search_engine.py
 
 Description
