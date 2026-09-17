@@ -172,11 +172,11 @@ VisionLens/
                  └──────────────────┘
 ```
 ## Challenges
-### 1.Handling a multi-label dataset stored through CSV files.
-### 2.Understanding how pretrained CNN models can be used for feature extraction.
-### 3.Selecting an appropriate similarity metric.
-### 4.Managing feature extraction for a relatively large image gallery.
-### 5.Designing a modular architecture within a limited project timeline.
-### 6.Handling dataset files without unnecessarily modifying the original dataset structure.
+ 1.Handling a multi-label dataset stored through CSV files.
+ 2.Understanding how pretrained CNN models can be used for feature extraction.
+ 3.Selecting an appropriate similarity metric.
+ 4.Managing feature extraction for a relatively large image gallery.
+ 5.Designing a modular architecture within a limited project timeline.
+ 6.Handling dataset files without unnecessarily modifying the original dataset structure.
 
 
