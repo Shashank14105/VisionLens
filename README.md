@@ -12,11 +12,11 @@
 |---|---|
 | **Name** | Shashank Kumar |
 | **Registration Number** | 24BAI10032 |
-| **Slot** | B22 |
+| **Slot** | F11+F12 |
 | **Project** | VisionLens |
 | **Course** | Computer Vision |
 | **Platform** | VITyarthi |
-| **Date of Submission** | 2026 |
+| **Date of Submission** | 17 September 2026 |
 
 ---
 
@@ -53,9 +53,64 @@ Top-5 Matching Results
 #### Validate and preprocess the uploaded image.
 #### Extract meaningful visual features using a pretrained CNN.
 #### Compare the query image with a gallery of found-item images.
+---
 
-# VisionLens
+## Module 1 Dataset Loader
+File: cv/dataset_loader.py
 
+Description
+Loads the dataset's train, valid, and test splits and reads the corresponding _classes.csv files.
+
+## Module 2 — Feature Extractor
+File: cv/feature_extractor.py
+
+Description
+Uses a pretrained ResNet-18 convolutional neural network to extract visual features from images.
+
+The final classification layer is removed so that the network produces a feature representation rather than a class prediction.
+
+## Module 3 — Similarity Engine
+File: cv/similarity.py
+
+Description
+Calculates the similarity between two image feature vectors.
+
+VisionLens uses cosine similarity to measure how close two visual representations are.
+
+Because the feature vectors are normalized, their dot product is equivalent to cosine similarity.
+
+## odule 4 — Search Engine
+File: cv/search_engine.py
+
+Description
+Coordinates the complete visual retrieval process.
+
+The Search Engine:
+
+Loads or builds the feature gallery.
+Extracts features from the query image.
+Compares the query against gallery images.
+Calculates similarity scores.
+Sorts the results.
+Returns the Top-K matches.
+
+## Module 5 — Web Application
+Description
+Provides the user-facing interface for VisionLens.
+
+The application accepts an image from the user and passes it through the computer vision pipeline.
+
+The resulting visually similar found items are then displayed to the use
+
+## Module 6 — Testing
+Directory: tests/
+
+Description
+Contains automated tests used to verify important parts of the VisionLens system.
+
+The testing process checks that the major project components behave as expected.
+
+---
 ## Features
 
 ### 1. Image Upload
