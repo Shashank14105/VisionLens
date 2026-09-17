@@ -1,0 +1,9 @@
+opencv-python
+torch
+torchvision
+numpy
+pandas
+scikit-learn
+Flask
+pytest
+Pillow

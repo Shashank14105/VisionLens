@@ -1,0 +1,16 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# IDE
+.vscode/
+
+# Generated feature cache
+features/gallery.pt
+
+# Dataset
+data/Lost-Found-Items.v1i.multiclass/
