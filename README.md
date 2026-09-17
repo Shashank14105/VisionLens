@@ -212,7 +212,7 @@ The project separates dataset loading, feature extraction, similarity calculatio
 
 ## License
 
-This project was submitted as part of the **Open Source Software Course at VIT Bhopal University**.
+This project was submitted as part of the **Computer Vision at VIT Bhopal University**.
 All scripts and documentation are original work by **SHASHANK KUMAR**.
 
 ---
