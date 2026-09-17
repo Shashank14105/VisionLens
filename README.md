@@ -22,11 +22,10 @@
 
 ## Project Overview
 
-**VisionLens** is a computer vision based visual matching system designed to assist in finding lost items on a campus.
-
+**VisionLens** is a lost-and-found image search project developed for the Computer Vision course. 
+The user provides a photograph of a lost item, and the application compares it with 
+images available in our found-item dataset.
 Instead of manually searching through photographs of found objects, a user can upload an image of a lost item. VisionLens extracts visual features from the uploaded image and compares them with a gallery of found-item images.
-
-The system then ranks the images according to visual similarity and displays the **Top-5 most visually similar matches**.
 
 ### Core Workflow
 
@@ -67,7 +66,9 @@ File: cv/feature_extractor.py
 Description
 Uses a pretrained ResNet-18 convolutional neural network to extract visual features from images.
 
-The final classification layer is removed so that the network produces a feature representation rather than a class prediction.
+I removed the last classification layer because I do not need ResNet-18 to predict ImageNet classes. 
+For this project, I need the intermediate representation of an image so that it can be compared 
+with the images stored in the gallery.
 
 ## Module 3 — Similarity Engine
 File: cv/similarity.py
@@ -149,38 +150,7 @@ The project separates dataset loading, feature extraction, similarity calculatio
 
 ## Project Structure
 
-```text
-VisionLens/
-│
-├── README.md
-├── statement.md
-├── requirements.txt
-│
-├── app/
-│   └── ...
-│
-├── cv/
-│   ├── dataset_loader.py
-│   ├── feature_extractor.py
-│   ├── similarity.py
-│   └── search_engine.py
-│
-├── data/
-│   └── diagrams/
-│       ├── 01_architecture.png
-│       ├── 02_workflow.png
-│       ├── 03_use_case.png
-│       ├── 04_class_component.png
-│       └── 05_sequence.png
-│
-├── features/
-│   └── gallery.pt
-│
-├── tests/
-│   └── test_visionlens.py
-│
-└── ...
-```
+
 ```
                  ┌──────────────────┐
                  │      User        │
@@ -228,17 +198,15 @@ VisionLens/
 ```
 ## Challenges
 
-1. Handling a multi-label dataset stored through CSV files.
+1. The dataset labels were provided through `_classes.csv`, so I had to identify the filename column and convert the remaining columns into a list of active labels.
 
-2. Understanding how pretrained CNN models can be used for feature extraction.
+2. Initially, I had to understand how ResNet-18 could be used for retrieval instead of normal image classification.
 
-3. Selecting an appropriate similarity metric.
+3. I selected cosine similarity because the extracted feature vectors can be normalized and compared using their direction.
 
-4. Managing feature extraction for a relatively large image gallery.
+4. Extracting ResNet features for every gallery image whenever the application starts would be slow, so I saved the extracted features in `gallery.pt`.
 
-5. Designing a modular architecture within a limited project timeline.
-
-6. Handling dataset files without unnecessarily modifying the original dataset structure.
+5. I separated dataset loading, feature extraction, similarity calculation, and searching into different Python modules to make debugging easier.
 
 ---
 
