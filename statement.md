@@ -4,11 +4,11 @@
 
 ## Problem
 
-Finding a lost item in a campus lost-and-found collection can require manually checking many item photographs.
+ In order to find a lost item in a campus lost-and-found collection can require manually checking many item photographs.
 
 ## Proposed Solution
 
-VisionLens is a computer vision based visual matching system that accepts an image of a lost item and searches a gallery of found-item images for visually similar results.
+VisionLens is a project that uses computer vision based visual matching system that accepts an image of a lost item and searches a gallery of found-item images for visually similar results.
 
 ## Target Users
 
@@ -29,7 +29,7 @@ The project focuses on the core computer vision retrieval pipeline:
 6. Top-5 retrieval
 7. Automated testing
 
-## High-Level Features
+## Features
 
 - Image-based search
 - Pretrained CNN feature extraction
