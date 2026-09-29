@@ -183,11 +183,6 @@ The project separates dataset loading, feature extraction, similarity calculatio
                           │
                           ▼
                  ┌──────────────────┐
-                 │   Flask Web UI   │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
                  │ Image Validation │
                  │ & Preprocessing  │
                  └────────┬─────────┘
