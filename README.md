@@ -147,6 +147,31 @@ Features extracted from the training gallery are saved locally so that the compl
 The project separates dataset loading, feature extraction, similarity calculation, search, application logic, and testing into different modules.
 
 ---
+### Step 1 — Clone the Repository
+    git clone https://github.com/Shashank14105/VisionLens
+    cd VisionLens
+    
+### Step 2 — Install Dependencies
+    pip install torch torchvision numpy pandas pillow pytest
+    
+### Step 3 — Add the Dataset
+    Place the dataset inside the expected dataset directory with the required _classes.csv files.
+    
+### Step 4 — Generate the Feature Gallery
+    Run the feature extraction process to generate the cached gallery:
+    python cv/feature_extractor.py
+    The extracted gallery features are stored locally in:
+    gallery.pt
+    This prevents ResNet-18 features from being recalculated every time the search process is executed.
+
+### Step 5 — Perform Image Search
+    Provide a query image to the search pipeline and compare it against the cached gallery.
+    The search engine extracts the query image features, calculates cosine similarity against the gallery, sorts the results, and returns the Top-K matches.
+
+### Step 6 — Run Tests
+    Run the automated tests using:
+    pytest
+---
 
 ## Project Structure
 
